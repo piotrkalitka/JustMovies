@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">JustMovies</string>
+    <string name="lipsum">Lorem ipsum dolor sit amet augue. Lorem ipsum eget pede ac arcu nec est. Curabitur imperdiet, lorem nec magna dolor, dictum a, diam. Proin cursus et, elementum quis, pellentesque purus, dictum wisi dui eu nisl at ipsum. Praesent nec magna. Quisque nunc. Maecenas ac turpis ut nulla. Sed fringilla neque, a augue quis wisi. Praesent rhoncus pede eget dui quis erat at lorem. Cras est diam, suscipit quis, ultricies a, blandit malesuada. Ut pretium. Vestibulum sollicitudin. Nulla faucibus scelerisque. Proin non sem. Quisque at augue. Morbi tincidunt. Proin ultrices posuere ligula sed viverra consectetuer. Etiam semper, nunc faucibus ipsum at.</string>
+    <string name="nothing_found_text">Sorry, nothing found :c</string>
+    <string name="hint_text">Start typing to search movie</string>
+
+    <string name="movie_release_date">&#60;b>Release date:&#60;/b> %1$s</string>
+    <string name="movie_runtime">&#60;b&#62;Runtime:&#60;/b&#62; %1$s</string>
+    <string name="movie_genre">&#60;b&#62;Genre:&#60;/b&#62; %1$s</string>
+    <string name="movie_director">&#60;b&#62;Director:&#60;/b&#62; %1$s</string>
+    <string name="movie_production">&#60;b&#62;Production:&#60;/b&#62; %1$s</string>
+
+    <string name="message_loading">Loading&#8230;</string>
+    <string name="movie_loading_error">Sorry, an error has occurred, tap to try again.</string>
+</resources>
