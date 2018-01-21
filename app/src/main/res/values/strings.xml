@@ -11,6 +11,17 @@
     <string name="movie_director">&#60;b&#62;Director:&#60;/b&#62; %1$s</string>
     <string name="movie_production">&#60;b&#62;Production:&#60;/b&#62; %1$s</string>
 
+    <string name="about_loading_title">Loading</string>
+    <string name="about_loading_message">Loading, please wait&#8230;</string>
+    <string name="about_loading_error_title">Error</string>
+    <string name="about_loading_error_message">An error occurred while loading about data. Do you want to try load data again?</string>
+    <string name="about_loading_positive_btn">Yes</string>
+    <string name="about_loading_negative_btn">No</string>
+
+    <string name="about_author_label">Author</string>
+    <string name="about_release_date_label">Release date</string>
+    <string name="about_app_version_label">Application version</string>
+
     <string name="message_loading">Loading&#8230;</string>
     <string name="movie_loading_error">Sorry, an error has occurred, tap to try again.</string>
 </resources>
