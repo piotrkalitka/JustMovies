@@ -1,11 +1,15 @@
 package com.piotrkalitka.justMovies.activities.searchActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +17,7 @@ import android.widget.Toast;
 import com.arlib.floatingsearchview.FloatingSearchView;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.piotrkalitka.justMovies.R;
+import com.piotrkalitka.justMovies.activities.aboutActivity.AboutActivity;
 import com.piotrkalitka.justMovies.api.ApiProvider;
 import com.piotrkalitka.justMovies.api.models.SearchModel;
 
@@ -89,6 +94,24 @@ public class SearchActivity extends AppCompatActivity implements FloatingSearchV
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_about:
+                Intent intent = new Intent(this, AboutActivity.class);
+                startActivity(intent);
+                return true;
+        }
+
+        return false;
+    }
 
     private void initToolbar() {
         toolbar.setTitle("");
@@ -120,7 +143,7 @@ public class SearchActivity extends AppCompatActivity implements FloatingSearchV
                 .search(query, null, null, null)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(searchModel ->{
+                .subscribe(searchModel -> {
                     searchView.hideProgress();
                     onMoviesFound.onMoviesFound(searchModel);
                 }, throwable -> {
@@ -129,7 +152,7 @@ public class SearchActivity extends AppCompatActivity implements FloatingSearchV
                 });
     }
 
-    private void showSearchError(){
+    private void showSearchError() {
         Toast.makeText(this, R.string.movie_loading_error, Toast.LENGTH_LONG).show();
     }
 

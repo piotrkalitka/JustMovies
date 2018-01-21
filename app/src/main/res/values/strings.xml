@@ -18,6 +18,7 @@
     <string name="about_loading_positive_btn">Yes</string>
     <string name="about_loading_negative_btn">No</string>
 
+    <string name="about_menu_title">About</string>
     <string name="about_author_label">Author</string>
     <string name="about_release_date_label">Release date</string>
     <string name="about_app_version_label">Application version</string>
