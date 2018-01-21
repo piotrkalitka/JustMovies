@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
@@ -124,8 +125,12 @@ public class SearchActivity extends AppCompatActivity implements FloatingSearchV
                     onMoviesFound.onMoviesFound(searchModel);
                 }, throwable -> {
                     searchView.hideProgress();
-                    // TODO: 25.12.2017 error handling
+                    showSearchError();
                 });
+    }
+
+    private void showSearchError(){
+        Toast.makeText(this, R.string.movie_loading_error, Toast.LENGTH_LONG).show();
     }
 
     private void showSuggestions(SearchModel model) {
